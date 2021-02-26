@@ -41,3 +41,171 @@ Open repository: /home/alfanshter/api/api-waktani
 > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
 > git remote --verbose
 > git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git symbolic-ref --short HEAD
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git show --textconv :index.js
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :index.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :.env
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/.env
+> git cat-file -s 24b907b6076dafbe1bd7a2045e77f453c2af697b
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :.env
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/.env
+> git cat-file -s 24b907b6076dafbe1bd7a2045e77f453c2af697b
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :index.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :index.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :index.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :index.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :route/produk.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/produk.js
+> git show --textconv :route/akun.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/route/akun.js
+> git cat-file -s 5379e8da06c026ffe43986da4ce761f823aa9489
+> git show --textconv :index.js
+> git ls-files --stage -- /home/alfanshter/api/api-waktani/index.js
+> git cat-file -s 38e758c88b4348382aa7f15142bb4cad312bc4a1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template

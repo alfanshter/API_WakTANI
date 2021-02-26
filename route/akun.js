@@ -3,10 +3,7 @@ const router = express.Router();
 //import model
 var admin = require("firebase-admin");
 
-var serviceAccount = require("../wak-tani-firebase-adminsdk-2puv4-b86c48bc92.json");
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+
 const db = admin.firestore()
 
 router.post('/user' , async (req,res) =>{

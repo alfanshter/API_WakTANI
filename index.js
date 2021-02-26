@@ -2,13 +2,19 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const app = express()
-
+var admin = require("firebase-admin");
+var serviceAccount = require("./wak-tani-firebase-adminsdk-2puv4-b86c48bc92.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const insertproduk = require('./route/akun')
+const autentifikasi = require('./route/akun')
+const insertproduk = require('./route/produk')
 
-app.use('/api/users', insertproduk);
+app.use('/api/users', autentifikasi);
+app.use('/api/produk', insertproduk);
 
 
 // const docRef = db.collection('users').doc('alovelace');
