@@ -119,6 +119,23 @@ const cityRef = db.collection('produk').doc(id_produk);
             
 })
 
+//@route DELETE api/produk/produk/:uid
+//@desc  DELETE produk sesuai id_produk
+//@Access ALL
+router.delete('/produk/:id_produk' , async (req,res)=>{
+    const {id_produk} = req.params
+    const del = await db.collection('produk').doc(id_produk).delete().then(function(){
+        return res.status(200).json({
+            status : res.statusCode,
+            message : 'Delete Berhasil'
+        })
+    }).catch((error)=>{
+        return res.status(400).json({
+            status : res.statusCode,
+            message : error
+        })
+    })
+})
 
 
 module.exports = router 
