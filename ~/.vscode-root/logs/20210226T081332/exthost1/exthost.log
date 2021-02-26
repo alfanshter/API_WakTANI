@@ -172,3 +172,5 @@ Error: Debug Failure. False expression.
 [2021-02-26 10:58:36.404] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 3001
 [2021-02-26 10:58:41.490] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 3001
 [2021-02-26 11:01:45.744] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 3001
+[2021-02-26 16:22:36.256] [exthost] [info] extension host terminating: received terminate message from renderer
+[2021-02-26 16:22:37.329] [exthost] [info] exiting with code 0

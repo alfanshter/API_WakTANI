@@ -52,9 +52,31 @@ router.get('/produk' , async (req,res)=>{
             return doc.data();
       });
 
-      return res.json(getCoffee);
+      return res.status(200).json({
+          status : res.statusCode,
+          message : getCoffee
+      })
 
+})
 
+//@route GET api/produk/produk/
+//@desc  Create a Produk
+//@Access ALL
+router.get('/produk/:uid' , async (req,res)=>{
+
+    const {uid} = req.params
+
+    const citiesRef = db.collection('produk');
+    const snapshot = await citiesRef.where('uid', '==', uid).get() ;
+
+    let getCoffee = snapshot.docs.map((doc) => {
+        return doc.data();
+  });
+
+  return res.status(200).json({
+      status : res.statusCode,
+      message : getCoffee
+  })
 
 })
 
