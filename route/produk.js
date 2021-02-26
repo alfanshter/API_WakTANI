@@ -23,7 +23,8 @@ router.post('/produk' , async (req,res)=>{
         kategori_produk: kategori_produk,
         status_produk: status_produk,
         waktu_preorder: waktu_preorder,
-        uid : uid
+        uid : uid,
+        id_produk : docRef.id
     })
 
     if(!docRef){
@@ -59,8 +60,8 @@ router.get('/produk' , async (req,res)=>{
 
 })
 
-//@route GET api/produk/produk/
-//@desc  Create a Produk
+//@route GET api/produk/produk/:uid
+//@desc  GET produk sesuai uid
 //@Access ALL
 router.get('/produk/:uid' , async (req,res)=>{
 
@@ -78,6 +79,44 @@ router.get('/produk/:uid' , async (req,res)=>{
       message : getCoffee
   })
 
+})
+
+//@route GET api/produk/produk/:uid
+//@desc  GET produk sesuai uid
+//@Access ALL
+router.put('/produk' , async (req,res)=>{
+const {foto,nama_produk,deskripsi,manfaat,penyimpanan,nama_supplier,harga,stok_produk,promo_produk,satuan_produk,kategori_produk,status_produk,waktu_preorder,id_produk} = req.body
+
+const cityRef = db.collection('produk').doc(id_produk);
+        const snapshot = await cityRef.update(
+            {   foto : foto,
+                nama_produk : nama_produk,
+                deskripsi, deskripsi,
+                manfaat : manfaat,
+                penyimpanan, penyimpanan,
+                nama_supplier, nama_supplier,
+                harga : harga,
+                stok_produk: stok_produk,
+                promo_produk: promo_produk,
+                satuan_produk: satuan_produk,
+                kategori_produk: kategori_produk,
+                status_produk: status_produk,
+                waktu_preorder: waktu_preorder
+            }).then(function(){
+                return res.status(200).json({
+                    status : res.statusCode,
+                    message : 'Update Berhasil'
+                })
+              
+            }) .catch((error) => {
+                return res.status(400).json({
+                    status : res.statusCode,
+                    message : error
+                })
+            });;
+
+
+            
 })
 
 
