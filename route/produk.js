@@ -8,7 +8,7 @@ const db = admin.firestore()
 router.post('/produk' , async (req,res)=>{
     const {foto,nama_produk,deskripsi,manfaat,penyimpanan,nama_supplier,harga,stok_produk,promo_produk,satuan_produk,kategori_produk,status_produk,waktu_preorder,uid} = req.body
 
-    const docRef = db.collection('produk').doc(uid);
+    const docRef = db.collection('produk').doc();
     docRef.set({
         foto : foto,
         nama_produk : nama_produk,
@@ -38,6 +38,24 @@ router.post('/produk' , async (req,res)=>{
         })
 
     }
+})
+
+//@route GET api/produk/produk/
+//@desc  Create a Produk
+//@Access ALL
+router.get('/produk' , async (req,res)=>{
+
+        const citiesRef = db.collection('produk');
+        const snapshot = await citiesRef.get();
+
+        let getCoffee = snapshot.docs.map((doc) => {
+            return doc.data();
+      });
+
+      return res.json(getCoffee);
+
+
+
 })
 
 
