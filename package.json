@@ -1,0 +1,15 @@
+{
+  "name": "api-waktani",
+  "version": "1.0.0",
+  "description": "api waktani",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alfanshter",
+  "license": "ISC"
+}

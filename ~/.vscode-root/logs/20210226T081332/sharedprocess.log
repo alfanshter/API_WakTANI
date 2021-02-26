@@ -1,0 +1,2 @@
+[2021-02-26 08:13:35.448] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/alfanshter/api/api-waktani/~/.vscode-root/User/snippets'
+[2021-02-26 08:14:15.448] [sharedprocess] [info] Starting to clean up unused language packs.
