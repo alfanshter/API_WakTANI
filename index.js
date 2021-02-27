@@ -13,10 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const autentifikasi = require('./route/akun')
 const insertproduk = require('./route/produk')
 const kategori = require('./route/kategori')
+const promo = require('./route/promo')
 
 app.use('/api/users', autentifikasi);
 app.use('/api/produk', insertproduk);
 app.use('/api/kategori', kategori);
+app.use('/api/promo', promo);
 
 
 // const docRef = db.collection('users').doc('alovelace');
