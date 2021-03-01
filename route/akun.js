@@ -166,7 +166,7 @@ router.post('/login', async (req,res)=>{
 })
 
 //@route GET api/users/login/
-//@desc  Create a Produk
+//@desc  GET User ID FIRESTORE
 //@Access ALL
 router.get('/login/:uid' , async (req,res)=>{
 
@@ -176,14 +176,16 @@ router.get('/login/:uid' , async (req,res)=>{
   const snapshot = await citiesRef.get();
 
   if(!snapshot.exists){
-    return res.status(400).json({
+    return res.status(200).json({
       status : res.statusCode,
+      kode : false,
       message : 'Tidak ada User'
   })
   }else{
     return res.status(200).json({
       status : res.statusCode,
-      message : snapshot.data()
+      kode : true,
+      data : snapshot.data()
   })
 
   }

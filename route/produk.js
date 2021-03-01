@@ -25,20 +25,23 @@ router.post('/produk' , async (req,res)=>{
         waktu_preorder: waktu_preorder,
         uid : uid,
         id_produk : docRef.id
-    })
-
-    if(!docRef){
-        return   res.status(400).json({
+    }).then(result => {
+        return   res.status(200).json({
             status : res.statusCode,
+            kdoe : true,
+            message : 'produk Berhasil di insert'
+        })
+
+    }).catch((error)=>{
+        return res.status(200).json({
+            status : res.statusCode,
+            kdoe : false,
             message : 'produk gagal di insert'
         })
-    }else{
-        res.status(200).json({
-            status : res.statusCode,
-            message : 'produk berhasil di insert'
-        })
 
-    }
+    })
+
+
 })
 
 //@route GET api/produk/produk/
