@@ -7,7 +7,7 @@ const db = admin.firestore()
 
 
 router.post('/promo' , async (req,res)=>{
-    const {nama,persyaratan_promo,minimal_harga,harga_promo,rupiah,persentase,maksimum_promo,jenis_promo} = req.body
+    const {nama,persyaratan_promo,minimal_harga,rupiah,persentase,maksimum_promo,jenis_promo} = req.body
     //@@ jenis promo 1 = rupiah
     //@@ jenis promo 2 = presentase
 
@@ -36,7 +36,8 @@ router.post('/promo' , async (req,res)=>{
                             message : error
                         })
                     })
-            }else{
+            }
+            else{
                 return   res.status(400).json({
                     status : res.statusCode,
                     message : 'Masukan minimal atau maksimal harga'
@@ -59,32 +60,12 @@ router.post('/promo' , async (req,res)=>{
                 }).catch((error)=>{
                     return res.status(400).json({
                         status : res.statusCode,
-                        message : 'error'
+                        message : error
                     })
                 })
 
                 
             }
-            const promoRef= db.collection('promo').doc()
-            const snapshot = promoRef.set({
-                nama : nama,
-                jenis_promo : jenis_promo,
-                persyaratan_promo : persyaratan_promo,
-                minimal_harga : minimal_harga,
-                harga_promo : harga_promo,
-                id_promo : promoRef.id
-            }).then(function(){
-                return res.status(200).json({
-                    status : res.statusCode,
-                    message : 'Insert Promo Berhasil'
-                })
-            }).catch((error)=>{
-                return res.status(400).json({
-                    status : res.statusCode,
-                    message : error
-                })
-            })
-
             
         
         }else{

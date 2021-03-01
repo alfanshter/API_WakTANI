@@ -6,6 +6,9 @@ var admin = require("firebase-admin");
 
 const db = admin.firestore()
 
+//@route POST api/users/user/
+//@desc  Create new user
+//@Access ALL 
 router.post('/user' , async (req,res) =>{
     const {email,telepon,password,nama} = req.body
     admin
@@ -55,7 +58,8 @@ router.get('/user/:uid' ,async (req,res)=>{
   .then((userRecord) => {
     return res.status(200).json({
         status : res.statusCode,
-        message : userRecord.toJSON()
+        message : 'Get Data berhasil',
+        data : userRecord.toJSON()
     })
 
   })
@@ -117,23 +121,75 @@ router.delete('/user/:uid' ,async (req,res)=>{
     admin
     .auth()
     .deleteUser(uid)
-    .then(() => {
-        async function deleteDocument(db) {
-        const res = await db.collection('users').doc(uid).delete();
-        return res.status(200).json({
-            status : res.statusCode,
-            message : 'Delete data berhasil'
-        })
-        }
-        deleteDocument(db)
+    .then(function(){
+      const res =  db.collection('users').doc(uid).delete();
+      return res.status(200).json({
+        status : res.statusCode,
+        message : 'Delete Berhasil'
     })
-    .catch((error) => {
-        return res.status(400).json({
-            status : res.statusCode,
-            message : 'Hapus Data Gagal'
-        })
+
+    }).catch((error) => {
+      return res.status(400).json({
+        status : res.statusCode,
+        message : 'Delete Gagal'
+    })
+
     });
   
 })
+
+//@route POST api/users/login/
+//@desc  Login user Android
+//@Access ALL 
+router.post('/login', async (req,res)=>{
+  const {email,nama,telepon,foto,uid,token} = req.body
+
+    const LoginRef = db.collection('users').doc(uid)
+    const snapshot = LoginRef.set({
+      nama : nama,
+      email : email,
+      telepon : telepon,
+      foto : foto,
+      uid : uid,
+      token : token
+    }).then(function(){
+      return res.status(200).json({
+        status : res.statusCode,
+        message : 'Insert Data berhasil'
+    })
+    }).catch((error)=>{
+      return res.status(400).json({
+        status : res.statusCode,
+        message : error
+    })
+    })
+})
+
+//@route GET api/users/login/
+//@desc  Create a Produk
+//@Access ALL
+router.get('/login/:uid' , async (req,res)=>{
+
+  const{uid} = req.params
+
+  const citiesRef = db.collection('users').doc(uid);
+  const snapshot = await citiesRef.get();
+
+  if(!snapshot.exists){
+    return res.status(400).json({
+      status : res.statusCode,
+      message : 'Tidak ada User'
+  })
+  }else{
+    return res.status(200).json({
+      status : res.statusCode,
+      message : snapshot.data()
+  })
+
+  }
+
+
+})
+
 
 module.exports = router 
